@@ -3,6 +3,7 @@
 This project is a lightweight, non-blocking CRUD API built with Spring Boot 3, Spring WebFlux, and Spring Data R2DBC. It uses an H2 in-memory database for testing purposes.
 
 ## 🚀 Features
+- **CI/CD Pipeline**: Automatically builds and pushes Docker images to GitHub Container Registry (GHCR).
 - **Non-blocking I/O**: Built on Project Reactor for high concurrency.
 - **Reactive Persistence**: Uses R2DBC for asynchronous database access.
 - **In-memory Database**: H2 database for quick setup and testing.
@@ -58,6 +59,22 @@ This project is a lightweight, non-blocking CRUD API built with Spring Boot 3, S
    docker run -p 2000:2000 crud-api
    ```
    The API will be available at `http://localhost:2000/api/tasks`
+
+## ☁️ Deployment (Free Hosting)
+
+To deploy this project for free on a "live" server:
+
+### 1. Render.com (Recommended)
+1. Sign up at [Render.com](https://render.com/).
+2. Click **New** -> **Web Service**.
+3. Connect your GitHub repository.
+4. Render will automatically detect the `Dockerfile` and deploy the application.
+5. In the Render settings, add an environment variable `PORT` with value `2000`.
+
+### 2. Railway.app
+1. Sign up at [Railway.app](https://railway.app/).
+2. Click **New Project** -> **Deploy from GitHub repo**.
+3. Railway will build the Docker image and deploy it.
 
 ---
 
